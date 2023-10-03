@@ -16,4 +16,19 @@ export class AppComponent {
     new Employee ('oufel','recar','prisedent',241)
 
   ]
+
+
+  addElement(){
+    let myEmployee = new Employee(this.cuadroNombre, this.cuadroApellido, this.cuadroCargo, this.cuadroSalary)
+    this.employees.unshift(myEmployee)
+
+  }
+
+
+  cuadroNombre!: string;
+  cuadroApellido!: string;
+  cuadroCargo!: string;
+  cuadroSalary!: number;
+
+
 }
