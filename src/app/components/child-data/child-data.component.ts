@@ -11,4 +11,11 @@ export class ChildDataComponent {
 @Input()  listEmp:Employee
 @Input()  indice:number
 
+
+
+arreyCharacters = [''];
+
+addCharacterer(newCaracter: string) {
+  this.arreyCharacters.push(newCaracter);
+}
 }

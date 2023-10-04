@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ChildDataComponent } from './components/child-data/child-data.component';
+import { EmpCaractersComponent } from './components/emp-caracters/emp-caracters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildDataComponent
+    ChildDataComponent,
+    EmpCaractersComponent
   ],
   imports: [
     BrowserModule,

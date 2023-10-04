@@ -1,0 +1,5 @@
+<form class="my-form">
+  <label for="item-input" class="my-label">Characters</label>
+  <input type="text" id="item-input" class="my-input" #newChar>
+  <button class="btn btn-warning my-button" type="button" (click)="addNewICharacter(newChar.value)">Add character</button>
+</form>

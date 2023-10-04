@@ -3,8 +3,18 @@
   <div class="row">
     <div class="col">
       <div>
-      {{ indice+1 }}.  {{listEmp.nombre}} {{listEmp.apellido}} {{listEmp.cargo}} {{listEmp.salary}}
+        <ol class="list-group">
+        <li class="list-group-item mt-3"> <strong>{{ indice+1 }}.</strong> {{listEmp.nombre}} {{listEmp.apellido}} {{listEmp.cargo}} {{listEmp.salary}}</li>
+       </ol>
       </div>
     </div>
   </div>
 </div>
+
+
+<app-emp-caracters (characterEmp)="addCharacterer($event)"></app-emp-caracters>
+
+
+<ul class="" [ngStyle]="{'list-style':'none'}">
+  <li class="list-group-item" *ngFor="let character of arreyCharacters">{{character}}</li>
+</ul>

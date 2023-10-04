@@ -1,0 +1,37 @@
+/* Define a root font size to establish a baseline for rem units */
+html {
+  font-size: 16px; /* Adjust this to set the base font size */
+}
+
+.my-form {
+  margin: 5rem; /* 1rem margin (16px) */
+  padding: 1rem; /* 1rem padding (16px) */
+  background-color: #eee893;
+  border: 1px solid #221d1d;
+  border-radius: 0.3125rem; /* 0.3125rem rounded corners (5px) */
+}
+
+.my-label {
+  font-weight: bold;
+  margin-bottom: 1rem; /* 0.625rem margin (10px) */
+}
+
+.my-input {
+  width: 100%;
+  padding: 0.625rem; /* 0.625rem padding (10px) */
+  border: 1px solid #e6dcdc;
+  border-radius: 0.1875rem; /* 0.1875rem rounded corners (3px) */
+  margin-bottom: 0.625rem;
+}
+
+.my-button {
+
+  color: #fff;
+
+
+  cursor: pointer;
+}
+
+.my-button:hover {
+  background-color: #ff5500;
+}
