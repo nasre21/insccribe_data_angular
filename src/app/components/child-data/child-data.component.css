@@ -1,0 +1,14 @@
+.custom_list {
+    list-style: none;
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+  
+  .list_item {
+    margin: 0.5rem;
+    padding: 1rem;
+    border:solid #ece2e2;
+    background-color: #f7f7f7;
+    border-radius: 0.3rem;
+  }
+  

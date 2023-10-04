@@ -14,7 +14,11 @@
 
 <app-emp-caracters (characterEmp)="addCharacterer($event)"></app-emp-caracters>
 
+<div>
 
-<ul class="" [ngStyle]="{'list-style':'none'}">
-  <li class="list-group-item" *ngFor="let character of arreyCharacters">{{character}}</li>
-</ul>
+  <div>
+    <ul class="custom_list">
+      <li class="list_item" *ngFor="let character of arreyCharacters">{{ character }}</li>
+    </ul>
+  </div>
+  
