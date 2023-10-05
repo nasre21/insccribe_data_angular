@@ -13,12 +13,14 @@ import { HomeComponentComponent } from './components/home-component/home-compone
 import { WhoComponentComponent } from './components/who-component/who-component.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NavBarComponentComponent } from './components/nav-bar-component/nav-bar-component.component';
+import { UpdateComponentsComponent } from './components/update-components/update-components.component';
 
 const appRoutes:Routes =[
   {path: '', component:HomeComponentComponent},
   {path: 'project', component:ProjectsComponent},
   {path: 'who', component:WhoComponentComponent},
-  {path: 'contact', component:ContactComponent}
+  {path: 'contact', component:ContactComponent},
+  {path: 'update', component:UpdateComponentsComponent}
 
 ]
 
@@ -31,7 +33,8 @@ const appRoutes:Routes =[
     ProjectsComponent,
     HomeComponentComponent,
     WhoComponentComponent,
-    NavBarComponentComponent
+    NavBarComponentComponent,
+    UpdateComponentsComponent
   ],
   imports: [
     BrowserModule,

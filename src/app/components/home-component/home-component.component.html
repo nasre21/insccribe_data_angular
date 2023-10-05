@@ -25,12 +25,13 @@
         <input type="text" name="salary" id="salary" placeholder="Salary" class="form-control" [(ngModel)]="cuadroSalary">
       </div>
 
+      <div class="mt-5 mb-5 d-flex justify-content-center">
+        <button type="submit" (click)="addElement()" class="btn btn-danger">Send</button>
+      </div>
+
     </form>
 </div>
 
-<div class="mt-5 mb-5 d-flex justify-content-center">
-  <button type="submit" (click)="addElement()" class="btn btn-danger">Send</button>
-</div>
 
 
 <app-child-data [listEmp]="employee" [indice]="i" *ngFor="let employee of employees; let i = index"></app-child-data>
