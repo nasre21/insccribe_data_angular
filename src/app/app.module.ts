@@ -20,7 +20,7 @@ const appRoutes:Routes =[
   {path: 'project', component:ProjectsComponent},
   {path: 'who', component:WhoComponentComponent},
   {path: 'contact', component:ContactComponent},
-  {path: 'update', component:UpdateComponentsComponent}
+  {path: 'update/:id', component:UpdateComponentsComponent}
 
 ]
 

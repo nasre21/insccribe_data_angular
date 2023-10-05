@@ -1,10 +1,14 @@
 <div class="container">
 
-  <div class="row">
-    <div class="col">
+  <div class="row ">
+    <div class="col mbt-5">
+
+
+
       <div>
+
         <ol class="list-group">
-        <li class="list-group-item mt-3"> <strong>{{ indice+1 }}.</strong> {{listEmp.nombre}} {{listEmp.apellido}} {{listEmp.cargo}} {{listEmp.salary}}</li>
+          <a [routerLink]="['update',indice+1]"> <li class="list-group-item mt-3"> <strong>{{ indice+1 }}.</strong> {{listEmp.nombre}} {{listEmp.apellido}} {{listEmp.cargo}} {{listEmp.salary}}</li></a>
        </ol>
       </div>
     </div>
@@ -21,4 +25,3 @@
       <li class="list_item" *ngFor="let character of arreyCharacters">{{ character }}</li>
     </ul>
   </div>
-  
