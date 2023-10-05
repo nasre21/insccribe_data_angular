@@ -18,10 +18,12 @@ export class EmployeeClassService {
 
   ];
 
-  addemployeeService(employees:Employee):void {
+  addemployeeService(employees:Employee){
 
     this.service.showMessage(`added employee: ${employees.nombre}  ${employees.apellido}  ${employees.cargo}  ${employees.salary}`)
     this.employees.push(employees)
 
   }
+
+
 }

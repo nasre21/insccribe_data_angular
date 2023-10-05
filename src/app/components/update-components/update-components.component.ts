@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Employee } from '../../employee.model';
 import { EmployeServiceService } from '../../service/employe-service.service';
 import { EmployeeClassService } from '../../service/employee-class.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-update-components',
@@ -13,14 +13,16 @@ export class UpdateComponentsComponent {
 
   employees:Employee[] = []
 
-  constructor(private readonly router: Router,private employeService: EmployeServiceService, private employeeClass: EmployeeClassService){
+  constructor(private readonly router: Router,private employeService: EmployeServiceService, private employeeClass: EmployeeClassService, private readonly route: ActivatedRoute) {
      //this.employees = employeeClass.employees
   }
 
 
   ngOnInit(): void {
     this.employees = this.employeeClass.employees
+    this.indice = this.route.snapshot.params['id'] // later we will review it
 
+   
   }
   addElement(){
     let myEmployee = new Employee(this.cuadroNombre, this.cuadroApellido, this.cuadroCargo, this.cuadroSalary)
@@ -35,6 +37,8 @@ export class UpdateComponentsComponent {
   cuadroApellido!: string;
   cuadroCargo!: string;
   cuadroSalary!: number;
+
+  indice!: number;
 
 
   goToStart(): void {
