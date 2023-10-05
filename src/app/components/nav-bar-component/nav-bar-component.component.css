@@ -1,0 +1,39 @@
+/* Style the navbar */
+.navbar {
+  background-color: #333;
+  color: #fff; 
+  padding: 1rem;
+}
+
+/* Style the navbar links */
+.navbar a {
+
+  color: #161212;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff6600;
+}
+
+/* Style the active link */
+.navbar-brand.active {
+  font-weight: bold;
+}
+
+/* Style the navbar toggler icon */
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+/* Center the navbar links */
+.navbar-nav {
+  text-align: center;
+}
+
+/* Style the container */
+.container-fluid {
+  padding: 1rem 2rem;
+}
