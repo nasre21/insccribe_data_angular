@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ChildDataComponent } from './components/child-data/child-data.component';
 import { EmpCaractersComponent } from './components/emp-caracters/emp-caracters.component';
+import { EmployeServiceService } from './service/employe-service.service';
+import { EmployeeClassService } from './service/employee-class.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,10 @@ import { EmpCaractersComponent } from './components/emp-caracters/emp-caracters.
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    EmployeServiceService,
+    EmployeeClassService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

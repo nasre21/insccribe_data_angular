@@ -1,3 +1,4 @@
+import { EmployeServiceService } from './../../service/employe-service.service';
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class EmpCaractersComponent {
 
+  constructor(private readonly employeServiceService: EmployeServiceService){
+  }
+
   @Output() characterEmp = new EventEmitter();
 
   addNewICharacter(event: String) {
+    this.employeServiceService.showMessage(`Nombe de employee ${event}.`)
+
     this.characterEmp.emit(event);
   }
 

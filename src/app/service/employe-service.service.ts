@@ -5,5 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class EmployeServiceService {
 
+
   constructor() { }
+
+
+showMessage(message: string){
+  alert(message);
+
+  
+}
 }
