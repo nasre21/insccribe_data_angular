@@ -1,15 +1,15 @@
 <div class="container">
-
-  <div class="row ">
-    <div class="col mbt-5">
-
-
-
+  <div class="row">
+    <div class="col mt-5">
       <div>
-
-        <ul class="list-group">
-          <a [routerLink]="['update',indice]"> <li class="list-group-item mt-3"> <strong>{{ indice+1 }}.</strong> {{listEmp.nombre}} {{listEmp.apellido}} {{listEmp.cargo}} {{listEmp.salary}}</li></a>
-       </ul>
+        <ul class="list-groups custom_group">
+          <a [routerLink]="['update',indice]">
+            <li class="custom-list-items mt-2">
+              <strong>{{ indice+1 }}.</strong>
+              {{listEmp.nombre}} {{listEmp.apellido}} {{listEmp.cargo}} {{listEmp.salary}}
+            </li>
+          </a>
+        </ul>
       </div>
     </div>
   </div>
