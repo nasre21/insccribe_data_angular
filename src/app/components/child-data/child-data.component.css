@@ -1,19 +1,15 @@
-.custom-container {
-  margin-bottom: 5rem; /* Puedes ajustar el valor según tus necesidades */
-  /* Otros estilos personalizados para el contenedor */
-}
 
 .custom-list-group {
   list-style: none;
   padding: 0;
-  /* Otros estilos personalizados para la lista */
+
 }
 
 .custom-list-item {
   border: 1px solid #ccc;
   padding: 1rem;
   margin-bottom: 1rem;
-  /* Otros estilos personalizados para los elementos de la lista */
+
 }
 
 
@@ -23,16 +19,16 @@
 .list-groups {
   list-style: none;
   padding: 0;
-  /* Otros estilos personalizados para la lista */
+
 }
 
 .custom-list-items  {
   text-decoration: none;
   background-color: #f8f9fa;
   border: none;
-  padding: 1rem; /* 1rem equivale a 16px */
-  margin: 1rem 0; /* 1rem arriba y abajo, 0 en los lados */
-  border-radius: 0.5rem; /* 0.5rem equivale a 8px */
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
@@ -41,13 +37,13 @@
   background-color: #e2e6ea;
 }
 
-/* Clase para el texto en negrita */
+
 .custom-list-items strong {
   font-weight: bold;
   color: #333;
 }
 
-/* Clase para el enlace */
+
 .custom-list-items a {
   text-decoration: none;
   color: #007bff;
