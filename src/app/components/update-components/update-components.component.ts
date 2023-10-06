@@ -13,7 +13,7 @@ export class UpdateComponentsComponent {
 
   employees:Employee[] = []
 
-  constructor(private readonly router: Router,private employeService: EmployeServiceService, private employeeClass: EmployeeClassService, private readonly route: ActivatedRoute) {
+  constructor(private readonly router: Router,private employeService: EmployeServiceService, private employeeClass: EmployeeClassService, private route: ActivatedRoute) {
      //this.employees = employeeClass.employees
   }
 
@@ -21,13 +21,17 @@ export class UpdateComponentsComponent {
   ngOnInit(): void {
     this.employees = this.employeeClass.employees
     this.indice = this.route.snapshot.params['id'] // later we will review it
+    let anEmploye:Employee = this.employeeClass.findEmployes(this.indice)
+    this.cuadroNombre = anEmploye.nombre
+    this.cuadroApellido= anEmploye.apellido
+    this.cuadroCargo = anEmploye.cargo
+    this.cuadroSalary= anEmploye.salary
 
-   
   }
-  addElement(){
+  updateElement(){
     let myEmployee = new Employee(this.cuadroNombre, this.cuadroApellido, this.cuadroCargo, this.cuadroSalary)
     this.employeService.showMessage(`Nombe de employee ${myEmployee}.`)
-    this.employeeClass.addemployeeService(myEmployee)
+    this.employeeClass.updateEmploye(this.indice, myEmployee)
     this.router.navigate(['']);
 
   }

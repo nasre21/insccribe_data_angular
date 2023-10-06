@@ -18,12 +18,27 @@ export class EmployeeClassService {
 
   ];
 
-  addemployeeService(employees:Employee){
+  addemployeeService(employees:Employee) {
 
     this.service.showMessage(`added employee: ${employees.nombre}  ${employees.apellido}  ${employees.cargo}  ${employees.salary}`)
     this.employees.push(employees)
 
   }
 
+  findEmployes(indice:number){
+    let anEmployes:Employee = this.employees[indice]
+
+    return anEmployes
+  }
+
+updateEmploye(indice:number, employee:Employee){
+
+let employeModify = this.employees[indice]
+employeModify.nombre = employee.nombre
+employeModify.apellido=employee.apellido
+employeModify.cargo = employee.cargo
+employeModify.salary = employee.salary
+
+}
 
 }
