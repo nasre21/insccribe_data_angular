@@ -41,4 +41,9 @@ employeModify.salary = employee.salary
 
 }
 
+deleteEmployee(indice:number):void {
+  this.employees.splice(indice,1)
+
+}
+
 }

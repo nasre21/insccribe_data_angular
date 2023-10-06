@@ -28,7 +28,7 @@ export class UpdateComponentsComponent {
     this.cuadroSalary= anEmploye.salary
 
   }
-  updateElement(){
+  updateElement(): void{
     let myEmployee = new Employee(this.cuadroNombre, this.cuadroApellido, this.cuadroCargo, this.cuadroSalary)
     this.employeService.showMessage(`Nombe de employee ${myEmployee}.`)
     this.employeeClass.updateEmploye(this.indice, myEmployee)
@@ -47,6 +47,11 @@ export class UpdateComponentsComponent {
 
   goToStart(): void {
 
+    this.router.navigate(['']);
+  }
+
+  deleteElement():void{
+    this.employeeClass.deleteEmployee(this.indice)
     this.router.navigate(['']);
   }
 

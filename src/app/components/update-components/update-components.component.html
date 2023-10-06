@@ -23,8 +23,9 @@
   </div>
 
 
-  <div class="mt-5 mb-5 d-flex justify-content-center">
+  <div class="mt-5 mb-5 d-flex justify-content-center gap-4">
     <button type="submit" (click)="updateElement()" class="btn btn-info">Update</button>
+    <button type="submit" (click)="deleteElement()" class="btn btn-danger">Delete</button>
   </div>
 </form>
 
@@ -32,7 +33,7 @@
 
 <div [ngStyle]="{'text-align': 'center'}">
 
-  <button type="submit" class="btn btn-success " (click)="goToStart()"> Go to start</button>
+  <button type="submit" class="btn btn-success " (click)="goToStart()">Go to start</button>
 
 </div>
 
