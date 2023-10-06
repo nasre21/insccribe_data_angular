@@ -6,8 +6,8 @@ html {
 .my-form {
   margin: 5rem; /* 1rem margin (16px) */
   padding: 1rem; /* 1rem padding (16px) */
-  background-color: #eee893;
-  border: 1px solid #221d1d;
+  background-color: #ffffff;
+  border: 1px solid #e0dddd;
   border-radius: 0.3125rem; /* 0.3125rem rounded corners (5px) */
 }
 
@@ -33,5 +33,5 @@ html {
 }
 
 .my-button:hover {
-  background-color: #ff5500;
+  background-color: #0c0b0b;
 }

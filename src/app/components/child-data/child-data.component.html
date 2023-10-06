@@ -7,21 +7,21 @@
 
       <div>
 
-        <ol class="list-group">
+        <ul class="list-group">
           <a [routerLink]="['update',indice]"> <li class="list-group-item mt-3"> <strong>{{ indice+1 }}.</strong> {{listEmp.nombre}} {{listEmp.apellido}} {{listEmp.cargo}} {{listEmp.salary}}</li></a>
-       </ol>
+       </ul>
       </div>
     </div>
   </div>
 </div>
 
+<div class="custom-container mb-5">
+  <app-emp-caracters (characterEmp)="addCharacterer($event)"></app-emp-caracters>
+<div class="container">
+  <ul class="custom-list-group">
+    <li class="custom-list-item" *ngFor="let character of arreyCharacters">{{ character }}</li>
+  </ul>
+</div>
 
-<app-emp-caracters (characterEmp)="addCharacterer($event)"></app-emp-caracters>
+</div>
 
-<div>
-
-  <div>
-    <ul class="custom_list">
-      <li class="list_item" *ngFor="let character of arreyCharacters">{{ character }}</li>
-    </ul>
-  </div>

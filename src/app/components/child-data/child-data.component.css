@@ -1,14 +1,17 @@
-.custom_list {
-    list-style: none;
-    padding-left: 7rem;
-    padding-right: 7rem;
-  }
-  
-  .list_item {
-    margin: 0.5rem;
-    padding: 1rem;
-    border:solid #ece2e2;
-    background-color: #f7f7f7;
-    border-radius: 0.3rem;
-  }
-  
+.custom-container {
+  margin-bottom: 5rem; /* Puedes ajustar el valor según tus necesidades */
+  /* Otros estilos personalizados para el contenedor */
+}
+
+.custom-list-group {
+  list-style: none;
+  padding: 0;
+  /* Otros estilos personalizados para la lista */
+}
+
+.custom-list-item {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  /* Otros estilos personalizados para los elementos de la lista */
+}
