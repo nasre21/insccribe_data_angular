@@ -1,15 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col mt-5">
-      <div>
-        <ul class="list-groups custom_group">
-          <a [routerLink]="['update',indice]">
-            <li class="custom-list-items mt-2">
-              <strong>{{ indice+1 }}.</strong>
-              {{listEmp.nombre}} {{listEmp.apellido}} {{listEmp.cargo}} {{listEmp.salary}}
-            </li>
+      <div class="list-groups custom_group d-flex gap-3">
+
+      {{indice +1}}. {{listEmp.nombre}} {{listEmp.apellido}} {{listEmp.cargo}} {{listEmp.salary}}
+          <a [routerLink]="['update',indice]" [queryParams]="{actiom:'1'}">
+            Update
+
           </a>
-        </ul>
+
+          <a [routerLink]="['update',indice]" [queryParams]="{actiom:'2'}">
+
+           Remove
+          </a>
       </div>
     </div>
   </div>
