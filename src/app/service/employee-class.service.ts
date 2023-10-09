@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Employee } from '../employee.model';
 import { EmployeServiceService } from './employe-service.service';
+import { DataServiceService } from './data-service.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeClassService {
 
-  constructor(private readonly service: EmployeServiceService) { }
+  constructor(private readonly service: EmployeServiceService,private dataService: DataServiceService) { }
 
   employees:Employee[] = [
 
@@ -22,6 +23,8 @@ export class EmployeeClassService {
 
     this.service.showMessage(`added employee: ${employees.nombre}  ${employees.apellido}  ${employees.cargo}  ${employees.salary}`)
     this.employees.push(employees)
+
+    this.dataService.sendEmploye(this.employees)
 
   }
 

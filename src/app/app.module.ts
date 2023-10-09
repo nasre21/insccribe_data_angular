@@ -16,6 +16,7 @@ import { NavBarComponentComponent } from './components/nav-bar-component/nav-bar
 import { UpdateComponentsComponent } from './components/update-components/update-components.component';
 import { ErrorPersonalizedCoponenComponent } from './components/error-personalized-coponen/error-personalized-coponen.component';
 
+import { HttpClientModule } from '@angular/common/http';
 const appRoutes:Routes =[
   {path: '', component:HomeComponentComponent},
   {path: 'project', component:ProjectsComponent},
@@ -43,7 +44,8 @@ const appRoutes:Routes =[
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [
     EmployeServiceService,
