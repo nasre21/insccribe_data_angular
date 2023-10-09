@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Employee } from '../employee.model';
 import { EmployeServiceService } from './employe-service.service';
 import { DataServiceService } from './data-service.service';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,8 @@ export class EmployeeClassService {
 
   constructor(private readonly service: EmployeServiceService,private dataService: DataServiceService) { }
 
-  obtainEmployee(){
-    return this.dataService.getUser()
+  obtainEmployee(): Observable<Employee> {
+    return this.dataService.getUser();
   }
   employees:Employee[] = [];
   // employees:Employee[] = [

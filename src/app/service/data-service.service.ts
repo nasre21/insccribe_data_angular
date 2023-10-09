@@ -1,6 +1,7 @@
 import { Employee } from './../employee.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +15,7 @@ export class DataServiceService {
     this.http.post(this.apiUrl, employees).subscribe(res => console.log(`respuesta${res}`));
   }
 
-  getUser(){
-    this.http.get(this.apiUrl).subscribe(res =>{
-      console.log('respuesta',res)
-
-    })
+  getUser(): Observable<Employee> {
+    return this.http.get<Employee>(this.apiUrl);
   }
 }

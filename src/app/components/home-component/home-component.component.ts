@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Employee } from '../../employee.model';
 import { EmployeServiceService } from '../../service/employe-service.service';
 import { EmployeeClassService } from '../../service/employee-class.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -19,13 +20,13 @@ constructor(private employeService: EmployeServiceService, private employeeClass
   //this.employees = employeeClass.employees
 }
 
-  ngOnInit(): void {
-    // this.employees = this.employeeClass.employees
+ngOnInit(): void {
+  this.employeeClass.obtainEmployee().subscribe(misEmpleados => {
+    console.log('respuesta', misEmpleados);
 
-    console.log(this.employeeClass.obtainEmployee())
-  }
-
-
+    this.employees = Object.values(misEmpleados)
+  });
+}
 
 
   addElement(){
