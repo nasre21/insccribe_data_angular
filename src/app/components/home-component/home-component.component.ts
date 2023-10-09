@@ -20,7 +20,9 @@ constructor(private employeService: EmployeServiceService, private employeeClass
 }
 
   ngOnInit(): void {
-    this.employees = this.employeeClass.employees
+    // this.employees = this.employeeClass.employees
+
+    console.log(this.employeeClass.obtainEmployee())
   }
 
 

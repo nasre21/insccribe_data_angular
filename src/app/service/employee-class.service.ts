@@ -10,14 +10,19 @@ export class EmployeeClassService {
 
   constructor(private readonly service: EmployeServiceService,private dataService: DataServiceService) { }
 
-  employees:Employee[] = [
+  obtainEmployee(){
+    return this.dataService.getUser()
+  }
+  employees:Employee[] = [];
+  // employees:Employee[] = [
 
-    new Employee ('oufel','nasser','prisedent',2431),
-    new Employee ('oufel','blask','prisedent',221),
-    new Employee ('oufel','jenif','prisedent',141),
-    new Employee ('oufel','recar','prisedent',241)
+  //   new Employee ('oufel','nasser','prisedent',2431),
+  //   new Employee ('oufel','blask','prisedent',221),
+  //   new Employee ('oufel','jenif','prisedent',141),
+  //   new Employee ('oufel','recar','prisedent',241)
 
-  ];
+  // ];
+
 
   addemployeeService(employees:Employee) {
 

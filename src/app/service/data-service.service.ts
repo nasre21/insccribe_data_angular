@@ -6,10 +6,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataServiceService {
+  private apiUrl = 'https://my-costumers-16e9a-default-rtdb.europe-west1.firebasedatabase.app/datos.json'
 
   constructor(private http: HttpClient) { }
 
   sendEmploye(employees: Employee[]){
-    this.http.post('https://my-costumers-16e9a-default-rtdb.europe-west1.firebasedatabase.app/datos.json', employees).subscribe(res => console.log(`respuesta${res}`));
+    this.http.post(this.apiUrl, employees).subscribe(res => console.log(`respuesta${res}`));
+  }
+
+  getUser(){
+    this.http.get(this.apiUrl).subscribe(res =>{
+      console.log('respuesta',res)
+
+    })
   }
 }
