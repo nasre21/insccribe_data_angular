@@ -1,3 +1,4 @@
+import { DataServiceService } from './../../service/data-service.service';
 import { Component } from '@angular/core';
 import { Employee } from '../../employee.model';
 import { EmployeServiceService } from '../../service/employe-service.service';
@@ -15,7 +16,7 @@ export class HomeComponentComponent {
 
   employees:Employee[] = []
 
-constructor(private employeService: EmployeServiceService, private employeeClass: EmployeeClassService){
+constructor(private employeService: EmployeServiceService, private employeeClass: EmployeeClassService, private dataService: DataServiceService){
 
   //this.employees = employeeClass.employees
 }
@@ -25,6 +26,9 @@ ngOnInit(): void {
     console.log('respuesta', misEmpleados);
 
     this.employees = Object.values(misEmpleados)
+    this.employeeClass.setEmpleado(this.employees)
+
+    console.log(this.employeeClass.obtainEmployee())
   });
 }
 

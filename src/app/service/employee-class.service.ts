@@ -11,6 +11,10 @@ export class EmployeeClassService {
 
   constructor(private readonly service: EmployeServiceService,private dataService: DataServiceService) { }
 
+
+  setEmpleado(misEmpleado:Employee[]) {
+    this.employees = misEmpleado
+  }
   obtainEmployee(): Observable<Employee> {
     return this.dataService.getUser();
   }
